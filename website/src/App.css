@@ -1,0 +1,146 @@
+.navbar {
+  background-color: whitesmoke;
+}
+.navbar .navbarLogo img {
+  max-width: 100px;
+  mix-blend-mode: multiply;
+}
+.navbar .nav-link:hover {
+  text-shadow: 0px 0px 10px blue;
+}
+.homeContainer {
+  background: linear-gradient(white, lightgrey);
+}
+.homeContainer .imgContainer {
+  padding: 250px 0px;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+}
+.homeContainer .imgContainer img {
+  max-height: 500px;
+  mix-blend-mode: multiply;
+}
+.homeContainer .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.homeContainer .services .big3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeContainer .services .big3 .card {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+.homeContainer .services .big3 .card .link {
+  color: black;
+  text-decoration: none;
+}
+.homeContainer .services .big3 .card img {
+  max-width: 100%;
+  max-height: 25%;
+  padding: 10px;
+}
+.homeContainer .services .big3 .card p {
+  padding: 0px 15px 0px;
+}
+.homeContainer .services .big3 .card h5 {
+  margin-top: 5px;
+}
+.homeContainer .services .big3 .card:hover {
+  border: 0.5px solid blue;
+  cursor: pointer;
+  background-color: whitesmoke;
+  transform: scale(1.1, 1.1);
+}
+.homeContainer .services .big3 .card:hover h5 {
+  color: blue;
+}
+.homeContainer .services .big3 .card:hover p {
+  color: #090211;
+}
+.consultingContainer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(blanchedalmond, grey);
+  border: 1px solid whitesmoke;
+}
+.consultingContainer .carouselContainer {
+  max-width: 650px;
+  height: 800px;
+  margin: 15% auto;
+  background-color: whitesmoke;
+  text-align: center;
+  padding-top: 50px;
+  border-radius: 15px;
+}
+.consultingContainer .carouselContainer img {
+  width: 600px;
+  height: 500px;
+}
+.consultingContainer .carouselContainer h5 {
+  margin-top: 30px;
+}
+.consultingContainer .carouselContainer .arrow {
+  mix-blend-mode: multiply;
+  height: 50px;
+  width: 50px;
+  margin-left: 230px;
+  margin-top: 20px;
+}
+.consultingContainer .carouselContainer button {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 150px;
+  height: 50px;
+  transition: all 1s ease;
+  background-color: whitesmoke;
+  margin-left: 400px;
+  margin-top: 0px;
+}
+.consultingContainer .carouselContainer button:hover {
+  background: linear-gradient(lightgrey, blanchedalmond);
+  color: blue;
+}
+.projectContainer {
+  margin: 75px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(maroon, black);
+}
+.projectContainer .project {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(whitesmoke, lightgrey);
+  width: 350px;
+  height: 400px;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+.projectContainer .project:hover {
+  transform: scale(1.2, 1.2);
+}
+.projectContainer img {
+  max-width: 300px;
+  max-height: 250px;
+}
