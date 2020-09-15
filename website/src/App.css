@@ -71,24 +71,46 @@
 .homeContainer .services .big3 .card:hover p {
   color: #090211;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .consultingContainer {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(blanchedalmond, grey);
+  min-height: 100vh;
+  min-width: 100vh;
+  background: linear-gradient(white, lightgrey);
   border: 1px solid whitesmoke;
 }
-.consultingContainer .carouselContainer {
-  max-width: 650px;
-  height: 800px;
+.consultingContainer .consultingSectionContainer {
   margin: 15% auto;
-  background-color: whitesmoke;
+  width: 300px;
+}
+.consultingContainer .consultingSectionContainer .titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.consultingContainer .consultingSectionContainer .titleContainer h4 {
+  font-size: 30px;
+  color: black;
+}
+.consultingContainer .carouselContainer {
+  width: 450px;
+  height: 600px;
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  background: linear-gradient(silver, blanchedalmond);
   text-align: center;
   padding-top: 50px;
   border-radius: 15px;
+  box-shadow: -2px 2px 2px grey;
 }
 .consultingContainer .carouselContainer img {
-  width: 600px;
-  height: 500px;
+  width: 400px;
+  height: 300px;
 }
 .consultingContainer .carouselContainer h5 {
   margin-top: 30px;
@@ -97,8 +119,9 @@
   mix-blend-mode: multiply;
   height: 50px;
   width: 50px;
-  margin-left: 230px;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 90px;
+  left: 47%;
 }
 .consultingContainer .carouselContainer button {
   border-radius: 10px;
@@ -107,10 +130,53 @@
   height: 50px;
   transition: all 1s ease;
   background-color: whitesmoke;
-  margin-left: 400px;
-  margin-top: 0px;
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
 }
 .consultingContainer .carouselContainer button:hover {
+  background: linear-gradient(lightgrey, blanchedalmond);
+  color: blue;
+}
+.consultingContainer .carousel2Container {
+  width: 450px;
+  height: 600px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  background: linear-gradient(silver, blanchedalmond);
+  text-align: center;
+  padding-top: 50px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px grey;
+}
+.consultingContainer .carousel2Container img {
+  width: 400px;
+  height: 300px;
+}
+.consultingContainer .carousel2Container h5 {
+  margin-top: 30px;
+}
+.consultingContainer .carousel2Container .arrow {
+  mix-blend-mode: multiply;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 90px;
+  left: 47%;
+}
+.consultingContainer .carousel2Container button {
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 150px;
+  height: 50px;
+  transition: all 1s ease;
+  background-color: whitesmoke;
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
+}
+.consultingContainer .carousel2Container button:hover {
   background: linear-gradient(lightgrey, blanchedalmond);
   color: blue;
 }

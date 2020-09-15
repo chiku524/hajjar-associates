@@ -1,69 +1,43 @@
 import React from 'react';
 import hibiscus from '../images/38HibiscusIsland.jpg';
-import leJune from '../images/221LeJuneOfficeBuilding2.jpg';
 import blue401 from '../images/401Blue2.jpg';
 import arlenHouse from '../images/ArlenHouseCondominiums.jpg';
 import bayHarbor from '../images/BayHarborResidences.jpg';
 import berkeleyHotel from '../images/BerkeleyHotel3.jpg';
 import breezeCondo from '../images/BreezeCondominium2.jpg';
-import chevrolet from '../images/Chevrolet (2).jpg';
 import colonnade from '../images/Colonnade2.jpg';
-import cubeSmart from '../images/CubeSmartStorage.jpg';
-import cutlerBayMiddle from '../images/cutlerBayMiddle.jpg';
-import cypressVillage from '../images/CypressVillageShoppingCenter.jpg';
 import dolceVitta from '../images/DolceVittaTownhouses.jpg';
-import doralStorage from '../images/DoralStorage.jpg';
-import eastCoastStorage from '../images/EastCoastStorage.jpg';
-import flamingoPlaza from '../images/FlamingoPlaza.jpg';
 import forgeLofts from '../images/ForgeLofts.jpg';
-import fortLaudyStorage from '../images/FortLauderdaleStorage.jpg';
-import gableEdgeStorage from '../images/GableEdgeStorage.jpg';
 import galianoCondo from '../images/GalianoCondominium.jpg';
 import guilfordHouseCondo from '../images/GuilfordHouseCondominiums.jpg';
 import hajjarhouse from '../images/HajjarHouse.jpg';
 import kedneySpa from '../images/KedneySpa.jpg';
-import kendall124 from '../images/Kendall124.jpg';
 import lancasterPlaza from '../images/LancasterPlaza.jpg';
 import ludlamResidence from '../images/LudlamResidence.jpg';
 import luxuryOceanFrontCondo from '../images/LuxuryOceanfrontCondominiums.jpg';
-import mmStorage from '../images/M&MStorage.jpg';
 import malaga from '../images/Malaga.jpg';
 import marDelPlata from '../images/MarDelPlata.jpg';
-import mequityStorage from '../images/MequityStorage.jpg';
-import miamiBeachFifth from '../images/MiamiBeachFifth&Alton.jpg';
 import miamiRiverTower from '../images/MiamiRiverTower.jpg';
-import miamiSeniorHigh from '../images/MiamiSeniorHighschool.jpg';
-import montessoryAcademy from '../images/MontessoryAcademy.jpg';
 import oceanFive from '../images/OceanFive.jpg';
 import ponceTower from '../images/PonceTower.jpg';
-import profOfficeBuilding from '../images/ProfessionalOfficeBuilding.jpg';
-import redburyHotel from '../images/RedburyHotel.jpg';
+import redburyHotel from '../images/RedburyHotel2.jpg';
 import riversideResidences from '../images/RiversideResidences.jpg';
-import rossEastHialeah from '../images/RossEastHialeah.jpg';
-import rossMillerSquare from '../images/RossMillerSquare.jpg';
 import sheratonHotel from '../images/SheratonHotel.jpg';
 import southBeachHotel from '../images/SouthbeachHotel.jpg';
 import transFloridaHQ from '../images/TransFloridaHeadquarters.jpg';
 import treasureOnTheBarCondo from '../images/TreasureOnTheBayCondominiums.jpg';
 import urbanClub from '../images/UrbanClub.jpg';
-import urbanStorage from '../images/UrbanStorage.jpg';
 import villaFlorini from '../images/VillaFlorini.jpg';
-import villaPatricia from '../images/VillaPatricia.jpg';
-import vinelandCenter from '../images/VinelandCenter.jpg';
+import villaPatricia from '../images/VillaPatricia2.jpg';
 import vodaI from '../images/VodaI2.jpg';
 import vodaII from '../images/VodaIIResidences.jpg';
 import wilshireCondo from '../images/WilshireCondominiums.jpg';
 
-const projects = [
+const privateProjects = [
     {
         id: 1,
         name: '38 Hibiscus Island',
         image: hibiscus
-    },
-    {
-        id: 2,
-        name: '221 Le June Office Building',
-        image: leJune
     },
     {
         id: 3, 
@@ -91,29 +65,9 @@ const projects = [
         image: breezeCondo
     },
     {
-        id: 8,
-        name: 'Chevrolet',
-        image: chevrolet
-    },
-    {
         id: 9,
         name: 'Colonnade',
         image: colonnade
-    },
-    {
-        id: 10,
-        name: 'Cube Smart Storage',
-        image: cubeSmart
-    },
-    {
-        id: 11,
-        name: 'Cutler Bay Middle School',
-        image: cutlerBayMiddle
-    },
-    {
-        id: 12,
-        name: 'Cypress Village Shopping Center',
-        image: cypressVillage
     },
     {
         id: 13,
@@ -121,34 +75,9 @@ const projects = [
         image: dolceVitta
     },
     {
-        id: 14,
-        name: 'Doral Storage',
-        image: doralStorage
-    },
-    {
-        id: 15,
-        name: 'East Coast Storage',
-        image: eastCoastStorage
-    },
-    {
-        id: 16,
-        name: 'Flamingo Plaza',
-        image: flamingoPlaza
-    },
-    {
         id: 17,
         name: 'Forge Lofts',
         image: forgeLofts
-    },
-    {
-        id: 18,
-        name: 'Fort Lauderdale Storage',
-        image: fortLaudyStorage
-    },
-    {
-        id: 19,
-        name: 'Gable Edge Storage',
-        image: gableEdgeStorage
     },
     {
         id: 20,
@@ -171,11 +100,6 @@ const projects = [
         image: kedneySpa
     },
     {
-        id: 24,
-        name: 'Kendall 124',
-        image: kendall124
-    },
-    {
         id: 25,
         name: 'Lancaster Plaza',
         image: lancasterPlaza
@@ -191,11 +115,6 @@ const projects = [
         image: luxuryOceanFrontCondo
     },
     {
-        id: 28,
-        name: 'M&M Storage',
-        image: mmStorage
-    },
-    {
         id: 29,
         name: 'Malaga',
         image: malaga
@@ -206,29 +125,9 @@ const projects = [
         image: marDelPlata
     },
     {
-        id: 31, 
-        name: 'Mequity Storage',
-        image: mequityStorage
-    },
-    {
-        id: 32,
-        name: 'Miami Beach Fifth & Alton',
-        image: miamiBeachFifth
-    },
-    {
         id: 33, 
         name: 'Miami River Tower',
         image: miamiRiverTower
-    },
-    {
-        id: 34,
-        name: 'Miami Senior Highschool',
-        image: miamiSeniorHigh
-    },
-    {
-        id: 35, 
-        name: 'Montessory Academy',
-        image: montessoryAcademy
     },
     {
         id: 36,
@@ -241,11 +140,6 @@ const projects = [
         image: ponceTower
     },
     {
-        id: 38,
-        name: 'Professional Office Building',
-        image: profOfficeBuilding
-    },
-    {
         id: 39, 
         name: 'Redbury Hotel',
         image: redburyHotel
@@ -254,16 +148,6 @@ const projects = [
         id: 40,
         name: 'Riverside Residences',
         image: riversideResidences
-    },
-    {
-        id: 41,
-        name: 'Ross - East Hialeah',
-        image: rossEastHialeah
-    },
-    {
-        id: 42,
-        name: 'Ross - Miller Square',
-        image: rossMillerSquare
     },
     {
         id: 43,
@@ -291,11 +175,6 @@ const projects = [
         image: urbanClub
     },
     {
-        id: 48,
-        name: 'Urban Storage',
-        image: urbanStorage
-    },
-    {
         id: 49, 
         name: 'Villa Florini',
         image: villaFlorini
@@ -304,11 +183,6 @@ const projects = [
         id: 50, 
         name: 'Villa Patricia',
         image: villaPatricia
-    },
-    {
-        id: 51,
-        name: 'Vineland K-8 Center',
-        image: vinelandCenter
     },
     {
         id: 52,
@@ -328,11 +202,11 @@ const projects = [
   ]
 
 
-const Projects = props => {
+const PrivateProjects = props => {
 
     return (
         <div className='projectContainer'>
-            {projects.map(project => (
+            {privateProjects.map(project => (
                 <div className='project'>
                     <h5>{project.name}</h5>
                     <img src={project.image} alt='hibiscus project' />
@@ -342,4 +216,4 @@ const Projects = props => {
     )
 }
 
-export default Projects;
+export default PrivateProjects;

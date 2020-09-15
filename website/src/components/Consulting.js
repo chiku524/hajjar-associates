@@ -5,8 +5,9 @@ import VodaIIResidences from '../images/VodaIIResidences.jpg';
 import VodaIResidences from '../images/VodaI.jpg';
 import cutlerBayMiddle from '../images/cutlerBayMiddle.jpg';
 import arrow from '../images/arrow.png';
+import bayHarbor from '../images/BayHarborResidences.jpg';
 
-const items = [
+const privateProjects = [
     {
         src: VodaIIResidences,
         altText: 'Slide 1',
@@ -18,36 +19,72 @@ const items = [
         caption: 'Voda I Residences'
     },
     {
-        src: cutlerBayMiddle,
+        src: bayHarbor,
         altText: 'Slide 3',
+        caption: 'Bay Harbor Residences'
+    }
+]
+
+const publicProjects = [
+    {
+        src: cutlerBayMiddle,
+        altText: 'Slide 1',
         caption: 'Cutler Bay Middle School'
     }
 ]
 
 const Consulting = props => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+    const [activeIndexPrivate, setActiveIndexPrivate] = useState(0);
+    const [activeIndexPublic, setActiveIndexPublic] = useState(0);
+    const [animatingPrivate, setAnimatingPrivate] = useState(false);
+    const [animatingPublic, setAnimatingPublic] = useState(false);
 
-    const next = () => {
-        if(animating) return;
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
+    const nextPrivate = () => {
+        if(animatingPrivate) return;
+        const nextIndex = activeIndexPrivate === privateProjects.length - 1 ? 0 : activeIndexPrivate + 1;
+        setActiveIndexPrivate(nextIndex);
     }
 
-    const previous = () => {
-        if(animating) return;
-        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
+    const previousPrivate = () => {
+        if(animatingPrivate) return;
+        const nextIndex = activeIndexPrivate === 0 ? privateProjects.length - 1 : activeIndexPrivate - 1;
+        setActiveIndexPrivate(nextIndex);
     }
 
-    const goToIndex = (newIndex) => {
-        if(animating) return;
-        setActiveIndex(newIndex);
+    const nextPublic = () => {
+        if(animatingPublic) return;
+        const nextIndex = activeIndexPublic === publicProjects.length - 1 ? 0 : activeIndexPublic + 1;
+        setActiveIndexPublic(nextIndex);
+    }
+
+    const previousPublic = () => {
+        if(animatingPublic) return;
+        const nextIndex = activeIndexPublic === 0 ? publicProjects.length - 1 : activeIndexPublic - 1;
+        setActiveIndexPublic(nextIndex);
+    }
+
+    const goToIndexPrivate = (newIndex) => {
+        if(animatingPrivate) return;
+        setActiveIndexPrivate(newIndex);
+    }
+
+    const goToIndexPublic = (newIndex) => {
+        if(animatingPublic) return;
+        setActiveIndexPublic(newIndex);
     }
     
-    const slides = items.map((item) => {
+    const privateSlides = privateProjects.map((item) => {
         return(
-            <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
+            <CarouselItem onExiting={() => setAnimatingPrivate(true)} onExited={() => setAnimatingPrivate(false)} key={item.src}>
+                <img src={item.src} alt={item.src} />
+                <CarouselCaption captionHeader={item.caption} />
+            </CarouselItem>
+        )
+    })
+
+    const publicSlides = publicProjects.map((item) => {
+        return(
+            <CarouselItem onExiting={() => setAnimatingPublic(true)} onExited={() => setAnimatingPublic(false)} key={item.src}>
                 <img src={item.src} alt={item.src} />
                 <CarouselCaption captionHeader={item.caption} />
             </CarouselItem>
@@ -56,16 +93,43 @@ const Consulting = props => {
 
     return (
         <div className='consultingContainer'>
+            <div className='consultingSectionContainer'>
+                <div className='titleContainer'>
+                    <h4>Architectural</h4>
+                    <h4>Structural</h4>
+                    <h4>Civil</h4>
+                </div>
+                <div className='content'>
+                    <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                </div>
+            </div>
+
             <div className='carouselContainer'>
-                <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-                    <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-                    {slides}
-                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                    <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                <h4>Private</h4>
+                <Carousel activeIndex={activeIndexPrivate} next={nextPrivate} previous={previousPrivate}>
+                    <CarouselIndicators items={privateProjects} activeIndex={activeIndexPrivate} onClickHandler={goToIndexPrivate} />
+                    {privateSlides}
+                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPrivate} />
+                    <CarouselControl direction="next" directionText="Next" onClickHandler={nextPrivate} />
                 </Carousel>
                 <h5>Some of our projects</h5>
                 <img className='arrow' src={arrow} alt='arrow from toptal' />
-                <Link to='/consulting/projects'>
+                <Link to='/consulting/private/projects'>
+                    <button>Browse Projects!</button>
+                </Link>
+            </div>
+
+            <div className='carousel2Container'>
+                <h4>Public</h4>
+                <Carousel activeIndex={activeIndexPublic} next={nextPublic} previous={previousPublic}>
+                    <CarouselIndicators items={publicProjects} activeIndex={activeIndexPublic} onClickHandler={goToIndexPublic} />
+                    {publicSlides}
+                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPublic} />
+                    <CarouselControl direction="next" directionText="Next" onClickHandler={nextPublic} />
+                </Carousel>
+                <h5>Some of our projects</h5>
+                <img className='arrow' src={arrow} alt='arrow from toptal' />
+                <Link to='/consulting/public/projects'>
                     <button>Browse Projects!</button>
                 </Link>
             </div>
