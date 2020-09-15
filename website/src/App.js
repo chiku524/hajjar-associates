@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Consulting from './components/Consulting';
 import PrivateProjects from './components/PrivateProjects';
 import PublicProjects from './components/PublicProjects';
+import About from './components/About';
+import Contact from './components/Contact';
 import './App.css';
 
 
@@ -27,6 +29,12 @@ function App() {
         </Route>
         <Route exact path='/consulting/public/projects'>
           <PublicProjects />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/contact'>
+          <Contact />
         </Route>
       </Switch>
     </div>

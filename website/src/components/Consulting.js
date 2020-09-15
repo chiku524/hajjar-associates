@@ -6,6 +6,8 @@ import VodaIResidences from '../images/VodaI.jpg';
 import cutlerBayMiddle from '../images/cutlerBayMiddle.jpg';
 import arrow from '../images/arrow.png';
 import bayHarbor from '../images/BayHarborResidences.jpg';
+import mequityStorage from '../images/MequityStorage.jpg';
+import cubeSmartStorage from '../images/CubeSmartStorage.jpg';
 
 const privateProjects = [
     {
@@ -30,6 +32,16 @@ const publicProjects = [
         src: cutlerBayMiddle,
         altText: 'Slide 1',
         caption: 'Cutler Bay Middle School'
+    },
+    {
+        src: mequityStorage,
+        altText: 'Slide 2',
+        caption: 'Mequity Storage'
+    },
+    {
+        src: cubeSmartStorage,
+        altText: 'Slide 3',
+        caption: 'Cube Smart Storage'
     }
 ]
 
