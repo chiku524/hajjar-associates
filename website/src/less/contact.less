@@ -7,11 +7,11 @@
         height: 70%;
         display: flex;
         flex-direction: column;
-        margin: 10% auto;
+        margin: 5% auto 0;
         text-align: center;
 
         h2 {
-            margin-bottom: 10%;
+            margin-bottom: 5%;
             font-weight: bold;
             color: blue;
             text-decoration: underline;
@@ -33,6 +33,19 @@
                 margin: 0px 40px 15px;
                 box-shadow: 2px 2px 2px grey;
                 border-radius: 25px;
+                transition: all .5s ease;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    display: block;
+                    margin: 40px auto;
+                    mix-blend-mode: multiply;
+                }
+
+                .msg {
+                    transform: scale(1.4, 1.4);
+                }
 
                 h4 {
                     padding-top: 20px;
@@ -44,6 +57,10 @@
                 p {
                     padding: 0px 15px;
                 }
+            }
+            .card:hover {
+                transform: scale(1.2, 1.2);
+                z-index: 1;
             }
         }
     }

@@ -1,4 +1,6 @@
 import React from 'react';
+import phone from '../images/phone.png';
+import message from '../images/message.png';
 
 const Contact = () => {
     
@@ -10,6 +12,7 @@ const Contact = () => {
                     <div className='card'>
                         <h4>Inquiries</h4>
                         <p>For any inquiries, questions or commendations, please call: (305)-445-2399</p>
+                        <img src={phone} alt='google-photo' />
                     </div>
                     <div className='card'>
                         <h4>Head Office</h4>
@@ -21,6 +24,7 @@ const Contact = () => {
                     <div className='card'>
                         <h4>Employment</h4>
                         <p>To apply for a job with M.Hajjar & Associates, please send a cover letter together with your C.V. to:info@mhajjar.com</p>
+                        <img className='msg' src={message} alt='google-photo' />
                     </div>
                     <div className='card'>
                         <h4>Testing Lab</h4>
