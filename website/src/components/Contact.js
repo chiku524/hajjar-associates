@@ -11,7 +11,7 @@ const Contact = () => {
                 <div className='content'>
                     <div className='card'>
                         <h4>Inquiries</h4>
-                        <p>For any inquiries, questions or commendations, please call: (305)-445-2399</p>
+                        <p>For any inquiries, questions or commendations, please call: (305)445-2399</p>
                         <img src={phone} alt='google-photo' />
                     </div>
                     <div className='card'>
