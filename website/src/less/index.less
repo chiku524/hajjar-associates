@@ -4,7 +4,22 @@
 @import 'projects';
 @import 'about';
 @import 'contact';
+@import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
 
 body {
-    background: linear-gradient(white, lightgrey);
+    animation: gradient 15s ease infinite;
+    background-size: 110% 110%;
+    font-family: "Orienta", sans-serif;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

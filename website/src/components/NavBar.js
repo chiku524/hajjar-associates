@@ -11,9 +11,11 @@ const NavBar = () => {
     return(
         <>
             <Navbar light fixed='top' expand="md" className='navbar'>
-                <NavbarBrand to="/home" className='navbarLogo'>
-                    <img src={blueLogoNoText} alt='hajjarLogo' />
-                </NavbarBrand>
+                <Link to='/home'>
+                    <NavbarBrand to="/home" className='navbarLogo'>
+                        <img src={blueLogoNoText} alt='hajjarLogo' />
+                    </NavbarBrand>
+                </Link>
                 <Nav className="mr-auto" navbar>
                     <NavItem>
                         <Link to="/home" className="nav-link">

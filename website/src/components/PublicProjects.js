@@ -12,7 +12,6 @@ import gableEdgeStorage from '../images/GableEdgeStorage.jpg';
 import kendall124 from '../images/Kendall124.jpg';
 import lancasterPlaza from '../images/LancasterPlaza.jpg';
 import mmStorage from '../images/M&MStorage.jpg';
-import malaga from '../images/Malaga.jpg';
 import mequityStorage from '../images/MequityStorage.jpg';
 import miamiBeachFifth from '../images/MiamiBeachFifth&Alton.jpg';
 import miamiSeniorHigh from '../images/MiamiSeniorHighschool.jpg';

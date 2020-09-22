@@ -8,6 +8,9 @@
 .navbar .nav-link:hover {
   text-shadow: 0px 0px 10px blue;
 }
+.homeContainer {
+  background: linear-gradient(whitesmoke, lightgrey);
+}
 .homeContainer .imgContainer {
   padding: 250px 0px;
   height: 1000px;
@@ -73,17 +76,18 @@ body {
   padding: 0;
 }
 .consultingContainer {
-  min-height: 100vh;
-  min-width: 100vh;
-  background: linear-gradient(white, lightgrey);
-  border: 1px solid whitesmoke;
+  min-height: 100%;
+  min-width: 100%;
+  padding-top: 50px;
+  background: linear-gradient(whitesmoke, lightgrey);
 }
 .consultingContainer .consultingSectionContainer {
-  margin: 15% auto;
+  margin: 0 auto;
   width: 300px;
 }
 .consultingContainer .consultingSectionContainer .titleContainer {
   display: flex;
+  margin-top: 50%;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -93,34 +97,70 @@ body {
   font-size: 30px;
   color: black;
 }
-.consultingContainer .carouselContainer {
-  width: 450px;
-  height: 600px;
-  position: absolute;
-  top: 20%;
-  right: 15%;
-  background: linear-gradient(silver, blanchedalmond);
+.consultingContainer .contentContainer {
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-top: 100px;
+  transition: all 1.3s ease;
+  overflow: hidden;
+  padding-bottom: 100px;
+  background-color: darkslategrey;
+}
+.consultingContainer .contentContainer h2 {
+  color: silver;
+  position: relative;
+  left: -300px;
+  transition: all 1.3s ease;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 75px;
+  font-size: 40px;
+}
+.consultingContainer .contentContainer .content {
+  float: right;
+  position: relative;
+  top: 100px;
+  font-size: 23px;
+  color: silver;
+}
+.consultingContainer .contentContainer .privateButton {
   text-align: center;
-  padding-top: 50px;
-  border-radius: 15px;
-  box-shadow: -2px 2px 2px grey;
+  float: right;
+  position: relative;
+  top: 450px;
+  left: 350px;
+  border-radius: 5px;
+  width: 200px;
+  height: 38px;
+  box-shadow: 1px 1px 2px grey;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: white;
+  transition: all 0.5s ease;
 }
-.consultingContainer .carouselContainer img {
-  width: 400px;
-  height: 300px;
+.consultingContainer .contentContainer .privateButton:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
-.consultingContainer .carouselContainer h5 {
-  margin-top: 30px;
+.consultingContainer .contentContainer .carouselContainer {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  float: right;
+  position: relative;
+  right: 60%;
+  top: 50px;
 }
-.consultingContainer .carouselContainer .arrow {
-  mix-blend-mode: multiply;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  bottom: 90px;
-  left: 47%;
+.consultingContainer .contentContainer .carouselContainer img {
+  width: 500px;
+  height: 400px;
 }
-.consultingContainer .carouselContainer button {
+.consultingContainer .contentContainer .carouselContainer button {
   border-radius: 10px;
   border: 1px solid black;
   width: 150px;
@@ -131,51 +171,70 @@ body {
   bottom: 40px;
   right: 10%;
 }
-.consultingContainer .carouselContainer button:hover {
+.consultingContainer .contentContainer .carouselContainer button:hover {
   background: linear-gradient(lightgrey, blanchedalmond);
   color: blue;
 }
-.consultingContainer .carousel2Container {
-  width: 450px;
-  height: 600px;
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  background: linear-gradient(silver, blanchedalmond);
+.consultingContainer .contentContainer:hover > h2 {
+  transform: translateX(35%);
+  transition: all 1.3s ease;
+  overflow: hidden;
+}
+.consultingContainer .content2Container {
+  width: 100%;
+  height: 700px;
+  transition: all 1.3s ease;
+  overflow: hidden;
+}
+.consultingContainer .content2Container h2 {
+  margin-top: 75px;
+  text-align: right;
+  transition: all 1.3s ease;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  left: 300px;
+  font-size: 40px;
+}
+.consultingContainer .content2Container .content {
+  position: relative;
+  left: 400px;
+  bottom: 350px;
+  font-size: 23px;
+}
+.consultingContainer .content2Container .publicButton {
   text-align: center;
-  padding-top: 50px;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px grey;
+  margin-left: 500px;
+  border-radius: 5px;
+  width: 200px;
+  height: 38px;
+  box-shadow: 1px 1px 2px grey;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: white;
+  transition: all 0.5s ease;
 }
-.consultingContainer .carousel2Container img {
-  width: 400px;
-  height: 300px;
+.consultingContainer .content2Container .publicButton:hover {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
-.consultingContainer .carousel2Container h5 {
-  margin-top: 30px;
+.consultingContainer .content2Container .carousel2Container {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  left: 60%;
+  top: 50px;
 }
-.consultingContainer .carousel2Container .arrow {
-  mix-blend-mode: multiply;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  bottom: 90px;
-  left: 47%;
+.consultingContainer .content2Container .carousel2Container img {
+  width: 500px;
+  height: 400px;
 }
-.consultingContainer .carousel2Container button {
-  border-radius: 10px;
-  border: 1px solid black;
-  width: 150px;
-  height: 50px;
-  transition: all 1s ease;
-  background-color: whitesmoke;
-  position: absolute;
-  bottom: 40px;
-  right: 10%;
-}
-.consultingContainer .carousel2Container button:hover {
-  background: linear-gradient(lightgrey, blanchedalmond);
-  color: blue;
+.consultingContainer .content2Container:hover > h2 {
+  transform: translateX(-35%);
+  transition: all 1.3s ease;
 }
 .projectContainer {
   margin: 75px auto 0;
@@ -184,9 +243,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 110%;
   width: 100%;
   background: linear-gradient(maroon, black);
+  background-size: 110% 110%;
+  padding: 40px 40px;
 }
 .projectContainer .project {
   display: flex;
@@ -321,6 +382,26 @@ body {
   transform: scale(1.2, 1.2);
   z-index: 1;
 }
+@font-face {
+  font-family: 'Orienta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Orienta'), local('Orienta-Regular'), url(https://fonts.gstatic.com/s/orienta/v8/PlI9FlK4Jrl5Y9zNeyc.ttf) format('truetype');
+}
 body {
-  background: linear-gradient(white, lightgrey);
+  animation: gradient 15s ease infinite;
+  background-size: 110% 110%;
+  font-family: "Orienta", sans-serif;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
