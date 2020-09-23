@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Lightbox from 'react-image-lightbox';
+import MyModal from './MyModal';
+import 'react-image-lightbox/style.css'; 
 import hibiscus from '../images/38HibiscusIsland.jpg';
+import hibiscus2 from '../images/38HibiscusIsland2.jpg';
 import blue401 from '../images/401Blue2.jpg';
 import arlenHouse from '../images/ArlenHouseCondominiums.jpg';
 import bayHarbor from '../images/BayHarborResidences.jpg';
@@ -35,181 +39,207 @@ import wilshireCondo from '../images/WilshireCondominiums.jpg';
 
 const privateProjects = [
     {
-        id: 1,
+        id: 0,
         name: '38 Hibiscus Island',
         image: hibiscus
     },
     {
-        id: 3, 
+        id: 1, 
         name: '401 Blue',
         image: blue401
     },
     {
-        id: 4,
+        id: 2,
         name: 'Arlen House Condominiums',
         image: arlenHouse
     },
     {
-        id: 5,
+        id: 3,
         name: 'Bay Harbor Residences',
         image: bayHarbor
     },
     {
-        id: 6, 
+        id: 4, 
         name: 'Berkeley Hotel',
         image: berkeleyHotel
     },
     {
-        id: 7, 
+        id: 5, 
         name: 'Breeze Condominium',
         image: breezeCondo
     },
     {
-        id: 9,
+        id: 6,
         name: 'Colonnade',
         image: colonnade
     },
     {
-        id: 13,
+        id: 7,
         name: 'Dolce Vitta Townhouses',
         image: dolceVitta
     },
     {
-        id: 17,
+        id: 8,
         name: 'Forge Lofts',
         image: forgeLofts
     },
     {
-        id: 20,
+        id: 9,
         name: 'Galiano Condominium',
         image: galianoCondo
     },
     {
-        id: 21,
+        id: 10,
         name: 'Guilford House Condominium',
         image: guilfordHouseCondo
     },
     {
-        id: 22,
+        id: 11,
         name: 'Hajjar House',
         image: hajjarhouse
     },
     {
-        id: 23, 
+        id: 12, 
         name: 'Kedney Spa',
         image: kedneySpa
     },
     {
-        id: 25,
+        id: 13,
         name: 'Lancaster Plaza',
         image: lancasterPlaza
     },
     {
-        id: 26,
+        id: 14,
         name: 'Ludlam Residence',
         image: ludlamResidence
     },
     {
-        id: 27, 
+        id: 15, 
         name: 'Luxury Oceanfront Condominium',
         image: luxuryOceanFrontCondo
     },
     {
-        id: 29,
+        id: 16,
         name: 'Malaga',
         image: malaga
     },
     {
-        id: 30,
+        id: 17,
         name: 'Mar Del Plata',
         image: marDelPlata
     },
     {
-        id: 33, 
+        id: 18, 
         name: 'Miami River Tower',
         image: miamiRiverTower
     },
     {
-        id: 36,
+        id: 19,
         name: 'Ocean Five',
         image: oceanFive
     },
     {
-        id: 37,
+        id: 20,
         name: 'Ponce Tower',
         image: ponceTower
     },
     {
-        id: 39, 
+        id: 21, 
         name: 'Redbury Hotel',
         image: redburyHotel
     },
     {
-        id: 40,
+        id: 22,
         name: 'Riverside Residences',
         image: riversideResidences
     },
     {
-        id: 43,
+        id: 23,
         name: 'Sheraton Hotel',
         image: sheratonHotel
     },
     {
-        id: 44,
+        id: 24,
         name: 'South Beach Hotel',
         image: southBeachHotel
     },
     {
-        id: 45,
+        id: 25,
         name: 'Trans Florida Headquarters',
         image: transFloridaHQ
     },
     {
-        id: 46, 
+        id: 26, 
         name: 'Treasure On The Bar Condominium',
         image: treasureOnTheBarCondo
     },
     {
-        id: 47, 
+        id: 27, 
         name: 'Urban Club',
         image: urbanClub
     },
     {
-        id: 49, 
+        id: 28, 
         name: 'Villa Florini',
         image: villaFlorini
     },
     {
-        id: 50, 
+        id: 29, 
         name: 'Villa Patricia',
         image: villaPatricia
     },
     {
-        id: 52,
+        id: 30,
         name: 'Voda I Residences',
         image: vodaI
     },
     {
-        id: 53, 
+        id: 31, 
         name: 'Voda II Residences',
         image: vodaII
     },
     {
-        id: 54,
+        id: 32,
         name: 'Wilshire Condominiums',
         image: wilshireCondo
     }
   ]
 
-
 const PrivateProjects = props => {
+    const [show, setShow] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
+
+    const openModal = (index) => {
+        handleChanges(index);
+    }
+
+    const handleChanges = (index) => {
+            // 1. Make a shallow copy of the items
+            let items = [show];
+            // 2. Make a shallow copy of the item you want to mutate
+            let item = items[index];
+            // 3. Replace the property you're intested in
+            item = true;
+            // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
+            items[index] = item;
+            // 5. Set the state to our new copy
+            setShow(items);
+    }
+
+    const closeModal = () => {
+        setShow([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
+    }
 
     return (
         <div className='projectContainer'>
-            {privateProjects.map(project => (
-                <div className='project'>
-                    <h5>{project.name}</h5>
-                    <img src={project.image} alt='hibiscus project' />
+            {privateProjects.map((project, index) => (
+                <div className='lightbox' onClick={() => {openModal(index)}}>
+                    <div className='project'>
+                        <h5>{project.name}</h5>
+                        <img src={project.image} alt='hibiscus project' />
+                    </div>
+                    <div onClick={(e) => {e.stopPropagation()}}>
+                        <MyModal title={project.name} img={project.image} show={show[index]} onHide={closeModal}/>
+                    </div>
                 </div>
             ))}
         </div>

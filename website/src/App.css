@@ -267,11 +267,12 @@ body {
 .aboutContainer .contentContainer {
   width: 100%;
   background: linear-gradient(whitesmoke, lightgrey);
+  padding-bottom: 100px;
 }
 .aboutContainer .contentContainer .content {
   width: 50%;
   height: 60%;
-  margin-top: 12%;
+  margin-top: 4%;
   position: relative;
   right: -44%;
   padding: 15px;
@@ -282,10 +283,15 @@ body {
   border-radius: 5px;
   text-indent: 40px;
 }
-.aboutContainer .stats {
+.aboutContainer .statsContainer {
   display: flex;
-  position: absolute;
-  top: 8%;
+  justify-content: center;
+  align-items: center;
+}
+.aboutContainer .statsContainer .stats {
+  display: flex;
+  position: relative;
+  bottom: 10%;
   background: linear-gradient(gold, darkgoldenrod);
   width: 100%;
   justify-content: center;
@@ -293,17 +299,17 @@ body {
   text-align: center;
   height: 150px;
 }
-.aboutContainer .stats .stat {
+.aboutContainer .statsContainer .stats .stat {
   padding: 0px 30px;
   border-right: 3px solid goldenrod;
   border-left: 3px solid goldenrod;
 }
-.aboutContainer .stats .stat .number {
+.aboutContainer .statsContainer .stats .stat .number {
   font-size: 40px;
   font-weight: bold;
   text-shadow: 2px 2px 2px grey;
 }
-.aboutContainer .stats .stat .description {
+.aboutContainer .statsContainer .stats .stat .description {
   font-size: 30px;
   text-shadow: 2px 2px 2px grey;
 }
@@ -402,4 +408,11 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+.modalImg {
+  max-width: 700px;
+  max-height: 900px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
