@@ -17,12 +17,14 @@ const MyModal = (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={props.img} className='modalImg' />
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
+            <div className='modalImgContainer'>
+                <img src={props.img} className='modalImg' />
+            </div>
+            <p>
+                Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                consectetur ac, vestibulum at eros.
+            </p>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>

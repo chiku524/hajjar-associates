@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import MyModal from './MyModal';
 import leJune from '../images/221LeJuneOfficeBuilding2.jpg';
 import chevrolet from '../images/Chevrolet (2).jpg';
 import cubeSmart from '../images/CubeSmartStorage.jpg';
@@ -137,13 +138,40 @@ const publicProjects = [
 
 
 const PublicProjects = props => {
+    const [show, setShow] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
+
+    const openModal = (index) => {
+        handleChanges(index);
+    }
+
+    const handleChanges = (index) => {
+        // 1. Make a shallow copy of the items
+        let items = [show];
+        // 2. Make a shallow copy of the item you want to mutate
+        let item = items[index];
+        // 3. Replace the property you're intested in
+        item = true;
+        // 4. Put it back into our array. N.B. we *are* mutating the array here, but that's why we made a copy first
+        items[index] = item;
+        // 5. Set the state to our new copy
+        setShow(items);
+    }
+
+    const closeModal = () => {
+        setShow([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
+    }
 
     return (
         <div className='projectContainer'>
-            {publicProjects.map(project => (
-                <div className='project'>
-                    <h5>{project.name}</h5>
-                    <img src={project.image} alt='hibiscus project' />
+            {publicProjects.map((project, index) => (
+                <div className='lightbox' onClick={() => {openModal(index)}}>
+                    <div className='project'>
+                        <h5>{project.name}</h5>
+                        <img src={project.image} alt='hibiscus project' />
+                    </div>
+                    <div onClick={(e) => {e.stopPropagation()}}>
+                        <MyModal title={project.name} img={project.image} show={show[index]} onHide={closeModal}/>
+                    </div>
                 </div>
             ))}
         </div>
