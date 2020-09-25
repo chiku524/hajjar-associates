@@ -11,24 +11,7 @@
     line-height: 25px;
 }
 
-body {
-    animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-.modalImgContainer {
+.modalCarouselContainer {
     height: 700px;
     width: 700px;
     margin: 0 auto;
@@ -36,13 +19,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 
-    .modalImg {
-        max-width: 700px;
-        max-height: 900px;
-        display: block;
-        text-align: center;
-        margin: 0 auto;
+    .carousel-control-next-icon {
+        position: absolute !important;
+        background-color: black !important;
+        left: 10%;
+        height: 75px !important;
+    
     }
-}
+    
+    .carousel-control-prev-icon {
+        position: absolute !important;
+        background-color: black !important;
+        right: 10%;
+        height: 75px !important;
+    }
+}    
+
+.carouselImg {
+            max-width: 700px;
+            max-height: 900px;
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
