@@ -16,21 +16,25 @@ const Home = (props) => {
                 <h2>SERVICES</h2>
                 <div className='big3'>
                     <div className='card'>
-                        <Link to='consulting' className='link'>
+                        <Link to='/consulting' className='link'>
                             <img src={consultingImg} alt='wix-photo' />
                             <h5>Consulting</h5>
                             <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
                         </Link> 
                     </div>
                     <div className='card'>
-                        <img src={construction} alt='wix-photo' />
-                        <h5>Construction</h5>
-                        <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                        <Link to='/construction' className='link'>
+                            <img src={construction} alt='wix-photo' />
+                            <h5>Construction</h5>
+                            <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                        </Link>
                     </div>
                     <div className='card'>
-                        <img src={development} alt='wix-photo' />
-                        <h5>Development</h5>
-                        <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                        <Link to='development' className='link'>
+                            <img src={development} alt='wix-photo' />
+                            <h5>Development</h5>
+                            <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                        </Link>
                     </div>
                 </div>
             </div>

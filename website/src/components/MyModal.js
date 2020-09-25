@@ -5,31 +5,29 @@ import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCap
 
 
 const MyModal = (props) => {
-    const [activeIndexPrivate, setActiveIndexPrivate] = useState(0);
-    const [activeIndexPublic, setActiveIndexPublic] = useState(0);
-    const [animatingPrivate, setAnimatingPrivate] = useState(false);
-    const [animatingPublic, setAnimatingPublic] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
 
-    const nextPrivate = () => {
-      if(animatingPrivate) return;
-      const nextIndex = activeIndexPrivate === props.img.length - 1 ? 0 : activeIndexPrivate + 1;
-      setActiveIndexPrivate(nextIndex);
+    const next = () => {
+      if(animating) return;
+      const nextIndex = activeIndex === props.img.length - 1 ? 0 : activeIndex + 1;
+      setActiveIndex(nextIndex);
   }
 
-  const previousPrivate = () => {
-      if(animatingPrivate) return;
-      const nextIndex = activeIndexPrivate === 0 ? props.img.length - 1 : activeIndexPrivate - 1;
-      setActiveIndexPrivate(nextIndex);
+  const previous = () => {
+      if(animating) return;
+      const nextIndex = activeIndex === 0 ? props.img.length - 1 : activeIndex - 1;
+      setActiveIndex(nextIndex);
   }
 
-  const goToIndexPrivate = (newIndex) => {
-    if(animatingPrivate) return;
-    setActiveIndexPrivate(newIndex);
+  const goToIndex = (newIndex) => {
+    if(animating) return;
+    setActiveIndex(newIndex);
 }
 
-const privateSlides = props.img.map((item) => {
+const slides = props.img.map((item) => {
   return(
-      <CarouselItem onExiting={() => setAnimatingPrivate(true)} onExited={() => setAnimatingPrivate(false)} key={item}>
+      <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item}>
           <img src={item} alt={item.src} className='carouselImg' />
           <CarouselCaption captionHeader={item.caption} />
       </CarouselItem>
@@ -50,12 +48,12 @@ const privateSlides = props.img.map((item) => {
         </Modal.Header>
         <Modal.Body>
             <div className='modalCarouselContainer'>
-              <Carousel activeIndex={activeIndexPrivate} next={nextPrivate} previous={previousPrivate}>
-                  <CarouselIndicators items={props.img} activeIndex={activeIndexPrivate} onClickHandler={goToIndexPrivate} />
-                  {privateSlides}
+              <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+                  <CarouselIndicators items={props.img} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                  {slides}
               </Carousel>
-              <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPrivate} />
-              <CarouselControl direction="next" directionText="Next" onClickHandler={nextPrivate} />
+              <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+              <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
             </div>
             <p>
                 Cras mattis consectetur purus sit amet fermentum. Cras justo odio,

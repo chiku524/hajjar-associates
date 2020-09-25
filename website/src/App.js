@@ -7,6 +7,7 @@ import PrivateProjects from './components/PrivateProjects';
 import PublicProjects from './components/PublicProjects';
 import About from './components/About';
 import Contact from './components/Contact';
+import Construction from './components/Construction';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route exact path='/contact'>
             <Contact />
+          </Route>
+          <Route exact path='/construction'>
+            <Construction />
           </Route>
         </Switch>
       </ScrollToTop>

@@ -10,7 +10,8 @@
 }
 .homeContainer {
   background: linear-gradient(whitesmoke, lightgrey);
-  background-size: 110% 110%;
+  min-width: 1350px;
+  height: 100%;
 }
 .homeContainer .imgContainer {
   padding: 250px 0px;
@@ -34,6 +35,16 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 40px;
+  border: 1px solid black;
+  flex-wrap: nowrap;
+}
+@media (max-width: 950px) {
+  .homeContainer .services .big3 {
+    flex-wrap: wrap;
+  }
+  .homeContainer .services .big3 .card {
+    width: 60%;
+  }
 }
 .homeContainer .services .big3 .card {
   display: flex;
@@ -45,6 +56,11 @@
   border: 1px solid whitesmoke;
   background-color: white;
   transition: all 0.2s ease;
+}
+@media (max-width: 1350px) {
+  .homeContainer .services .big3 .card {
+    width: 50%;
+  }
 }
 .homeContainer .services .big3 .card .link {
   color: black;
@@ -110,30 +126,78 @@ body {
   overflow: hidden;
   padding-bottom: 100px;
   background-color: darkslategrey;
+  display: flex;
+  align-items: center;
 }
-.consultingContainer .contentContainer h2 {
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer {
+    flex-direction: column;
+    height: 1400px;
+  }
+}
+.consultingContainer .contentContainer .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  margin-left: 3%;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer .flex {
+    margin-left: 0px;
+  }
+}
+.consultingContainer .contentContainer .flex h2 {
   color: silver;
   position: relative;
-  left: -300px;
+  left: -400px;
   transition: all 1.3s ease;
   width: 100%;
   overflow: hidden;
   margin-top: 75px;
   font-size: 40px;
 }
-.consultingContainer .contentContainer .content {
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer .flex h2 {
+    left: -650px;
+  }
+}
+.consultingContainer .contentContainer .flex .carouselContainer {
+  width: 650px;
+  height: 400px;
+  text-align: center;
   float: right;
-  position: relative;
-  top: 100px;
-  left: 150px;
+}
+.consultingContainer .contentContainer .flex .carouselContainer img {
+  width: 500px;
+  height: 400px;
+}
+.consultingContainer .contentContainer .contentFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  border: 2px solid black;
+  height: 80%;
+  margin-right: 3%;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer .contentFlex {
+    margin-right: 0px;
+    justify-content: none;
+    margin-top: -20%;
+    width: 70%;
+  }
+}
+.consultingContainer .contentContainer .contentFlex .content {
   font-size: 23px;
   color: silver;
 }
-.consultingContainer .contentContainer .privateButton {
+.consultingContainer .contentContainer .contentFlex .privateButton {
   float: right;
-  position: relative;
-  top: 450px;
-  left: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,54 +210,102 @@ body {
   background-color: white;
   transition: all 0.5s ease;
 }
-.consultingContainer .contentContainer .privateButton:hover {
+.consultingContainer .contentContainer .contentFlex .privateButton:hover {
   background-color: blue;
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
-.consultingContainer .contentContainer .carouselContainer {
-  width: 650px;
-  height: 400px;
-  text-align: center;
-  float: right;
-  position: relative;
-  right: 60%;
-  top: 50px;
-}
-.consultingContainer .contentContainer .carouselContainer img {
-  width: 500px;
-  height: 400px;
-}
-.consultingContainer .contentContainer:hover > h2 {
-  transform: translateX(31%);
+.consultingContainer .contentContainer:hover h2 {
+  transform: translateX(77%);
   transition: all 1.3s ease;
   overflow: hidden;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer:hover h2 {
+    transform: translateX(150%);
+  }
 }
 .consultingContainer .content2Container {
   width: 100%;
   height: 700px;
+  margin: 0;
+  padding: 0;
+  border: none;
   transition: all 1.3s ease;
   overflow: hidden;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
-.consultingContainer .content2Container h2 {
+@media (max-width: 1150px) {
+  .consultingContainer .content2Container {
+    height: 1400px;
+    flex-direction: column;
+  }
+}
+.consultingContainer .content2Container .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45%;
+  height: 100%;
+  margin-left: 3%;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .content2Container .flex {
+    margin-right: 0px;
+  }
+}
+.consultingContainer .content2Container .flex h2 {
   margin-top: 75px;
   text-align: right;
   transition: all 1.3s ease;
   overflow: hidden;
   width: 100%;
   position: relative;
-  left: 300px;
+  left: 400px;
   font-size: 40px;
 }
-.consultingContainer .content2Container .content {
-  position: relative;
-  left: 400px;
-  bottom: 350px;
+@media (max-width: 1150px) {
+  .consultingContainer .content2Container .flex h2 {
+    left: 650px;
+  }
+}
+.consultingContainer .content2Container .flex .carousel2Container {
+  width: 650px;
+  height: 400px;
+  text-align: center;
+}
+.consultingContainer .content2Container .flex .carousel2Container img {
+  width: 500px;
+  height: 400px;
+}
+.consultingContainer .content2Container .contentFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  border: 2px solid black;
+  height: 80%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .content2Container .contentFlex {
+    margin-right: 0px;
+    justify-content: none;
+    margin-top: -20%;
+    width: 70%;
+  }
+}
+.consultingContainer .content2Container .contentFlex .content {
   font-size: 23px;
 }
-.consultingContainer .content2Container .publicButton {
-  margin-left: 500px;
+.consultingContainer .content2Container .contentFlex .publicButton {
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -206,27 +318,21 @@ body {
   background-color: white;
   transition: all 0.5s ease;
 }
-.consultingContainer .content2Container .publicButton:hover {
+.consultingContainer .content2Container .contentFlex .publicButton:hover {
   background-color: blue;
   color: white;
   text-decoration: none;
   cursor: pointer;
 }
-.consultingContainer .content2Container .carousel2Container {
-  width: 650px;
-  height: 400px;
-  text-align: center;
-  position: relative;
-  left: 60%;
-  top: 50px;
-}
-.consultingContainer .content2Container .carousel2Container img {
-  width: 500px;
-  height: 400px;
-}
-.consultingContainer .content2Container:hover > h2 {
-  transform: translateX(-31%);
+.consultingContainer .content2Container:hover h2 {
+  transform: translateX(-77%);
   transition: all 1.3s ease;
+  overflow: hidden;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .content2Container:hover h2 {
+    transform: translateX(-150%);
+  }
 }
 .projectContainer {
   margin: 75px auto 0;
@@ -385,16 +491,16 @@ body {
   transform: scale(1.2, 1.2);
   z-index: 1;
 }
-@font-face {
-  font-family: 'Orienta';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Orienta'), local('Orienta-Regular'), url(https://fonts.gstatic.com/s/orienta/v8/PlI9FlK4Jrl5Y9zNeyc.ttf) format('truetype');
+.constructionContainer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(whitesmoke, lightgrey);
 }
-* {
-  font-family: "Orienta", 'Times New Roman', Times, serif;
-  line-height: 25px;
+.constructionContainer .carouselContainer {
+  width: 700px;
+  height: 600px;
+  background-color: black;
+  margin: 100px auto 0px;
 }
 .modalCarouselContainer {
   height: 700px;
@@ -416,6 +522,20 @@ body {
   background-color: black !important;
   right: 10%;
   height: 75px !important;
+}
+.modal-content {
+  background: linear-gradient(whitesmoke, lightgrey) !important;
+}
+@font-face {
+  font-family: 'Orienta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Orienta'), local('Orienta-Regular'), url(https://fonts.gstatic.com/s/orienta/v8/PlI9FlK4Jrl5Y9zNeyc.ttf) format('truetype');
+}
+* {
+  font-family: "Orienta", 'Times New Roman', Times, serif;
+  line-height: 25px;
 }
 .carouselImg {
   max-width: 700px;

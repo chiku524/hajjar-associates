@@ -127,36 +127,44 @@ const Consulting = props => {
             </div>
 
             <div className='contentContainer'>
-                <h2>Private Projects</h2>
-                <div className='carouselContainer'>
-                <Carousel activeIndex={activeIndexPrivate} next={nextPrivate} previous={previousPrivate}>
-                    <CarouselIndicators items={privateProjects} activeIndex={activeIndexPrivate} onClickHandler={goToIndexPrivate} />
-                    {privateSlides}
-                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPrivate} />
-                    <CarouselControl direction="next" directionText="Next" onClickHandler={nextPrivate} />
-                </Carousel>
+                <div className='flex'>
+                    <h2>Private Projects</h2>
+                    <div className='carouselContainer'>
+                        <Carousel activeIndex={activeIndexPrivate} next={nextPrivate} previous={previousPrivate}>
+                            <CarouselIndicators items={privateProjects} activeIndex={activeIndexPrivate} onClickHandler={goToIndexPrivate} />
+                            {privateSlides}
+                            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPrivate} />
+                            <CarouselControl direction="next" directionText="Next" onClickHandler={nextPrivate} />
+                        </Carousel>
+                    </div>
                 </div>
-                <div className='content'>
-                    <p>Here goes some text about private projects</p>
+                <div className='contentFlex'>
+                    <div className='content'>
+                        <p>Here goes some text about private projects</p>
+                    </div>
+                    <div className='privateButton' onClick={takeToPrivateProjects}>Browse Projects!</div>
                 </div>
-                <div className='privateButton' onClick={takeToPrivateProjects}>Browse Projects!</div>
             </div>
             
 
             <div className='content2Container'>
-                <h2 id='title'>Public Projects</h2>
-                <div className='carousel2Container'>
-                    <Carousel activeIndex={activeIndexPublic} next={nextPublic} previous={previousPublic}>
-                        <CarouselIndicators items={publicProjects} activeIndex={activeIndexPublic} onClickHandler={goToIndexPublic} />
-                        {publicSlides}
-                        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPublic} />
-                        <CarouselControl direction="next" directionText="Next" onClickHandler={nextPublic} />
-                    </Carousel>
+                <div className='flex'>
+                    <h2 id='title'>Public Projects</h2>
+                    <div className='carousel2Container'>
+                        <Carousel activeIndex={activeIndexPublic} next={nextPublic} previous={previousPublic}>
+                            <CarouselIndicators items={publicProjects} activeIndex={activeIndexPublic} onClickHandler={goToIndexPublic} />
+                            {publicSlides}
+                            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previousPublic} />
+                            <CarouselControl direction="next" directionText="Next" onClickHandler={nextPublic} />
+                        </Carousel>
+                    </div>
                 </div>
-                <div className='content'>
-                    <p>Here goes some text about public projects</p>
+                <div className='contentFlex'>
+                    <div className='content'>
+                        <p>Here goes some text about public projects</p>
+                    </div>
+                    <div className='publicButton' onClick={takeToPublicProjects}>Browse Projects!</div>
                 </div>
-                <div className='publicButton' onClick={takeToPublicProjects}>Browse Projects!</div>
             </div>
             
         </div>
