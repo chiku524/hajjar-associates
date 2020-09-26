@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
-import gsap, {TweenMax, TimelineLite, Power3} from 'gsap';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import VodaIIResidences from '../images/VodaIIResidences.jpg';
 import VodaIResidences from '../images/VodaI.jpg';
 import cutlerBayMiddle from '../images/cutlerBayMiddle.jpg';
@@ -51,6 +51,12 @@ const Consulting = props => {
     const [activeIndexPublic, setActiveIndexPublic] = useState(0);
     const [animatingPrivate, setAnimatingPrivate] = useState(false);
     const [animatingPublic, setAnimatingPublic] = useState(false);
+    const [isStructuralOpen, setIsStructuralOpen] = useState(false);
+    const [isArchitecturalOpen, setIsArchitecturalOpen] = useState(false);
+    const [isCivilOpen, setIsCivilOpen] = useState(false);
+    const [structuralArrow, setStructuralArrow] = useState('down');
+    const [architecturalArrow, setArchitecturalArrow] = useState('down');
+    const [civilArrow, setCivilArrow] = useState('down');
     const history = useHistory();
 
     const nextPrivate = () => {
@@ -94,6 +100,21 @@ const Consulting = props => {
     const takeToPrivateProjects = () => {
         history.push('/consulting/private/projects');
     }
+
+    const toggleStructural = () => {
+        setIsStructuralOpen(!isStructuralOpen);
+        isStructuralOpen ? setStructuralArrow('down') : setStructuralArrow('up');
+    }
+
+    const toggleArchitectural = () => {
+        setIsArchitecturalOpen(!isArchitecturalOpen);
+        isArchitecturalOpen ? setArchitecturalArrow('down') : setArchitecturalArrow('up');
+    }
+
+    const toggleCivil = () => {
+        setIsCivilOpen(!isCivilOpen);
+        isCivilOpen ? setCivilArrow('down') : setCivilArrow('up');
+    }
     
     const privateSlides = privateProjects.map((item) => {
         return(
@@ -116,13 +137,52 @@ const Consulting = props => {
     return (
         <div className='consultingContainer'>
             <div className='consultingSectionContainer'>
+                <h2>SERVICES</h2>
                 <div className='titleContainer'>
-                    <h4>Architectural</h4>
-                    <h4>Structural</h4>
-                    <h4>Civil</h4>
-                </div>
-                <div className='content'>
-                    <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                    <div className='collapseContainer' onClick={toggleStructural}>
+                        <h4>Architectural</h4>
+                        <span className={structuralArrow}>&#10151;</span>  
+                    </div>
+                    <Collapse isOpen={isStructuralOpen}>
+                        <Card>
+                            <CardBody>
+                            Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                            anim keffiyeh helvetica, craft beer labore wes anderson cred
+                            nesciunt sapiente ea proident.
+                            </CardBody>
+                        </Card>
+                    </Collapse>
+                    <div className='collapseContainer' onClick={toggleArchitectural}>
+                        <h4>Structural</h4>
+                        <span className={architecturalArrow}>&#10151;</span>
+                            
+                    </div>
+                    <Collapse isOpen={isArchitecturalOpen}>
+                        <Card>
+                            <CardBody>
+                            Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                            anim keffiyeh helvetica, craft beer labore wes anderson cred
+                            nesciunt sapiente ea proident.
+                            </CardBody>
+                        </Card>
+                    </Collapse>
+                    <div className='collapseContainer' onClick={toggleCivil}>
+                        <h4>Civil</h4>
+                        <span className={civilArrow}>&#10151;</span>
+                            
+                    </div>
+                    <Collapse isOpen={isCivilOpen}>
+                        <Card>
+                            <CardBody>
+                            Anim pariatur cliche reprehenderit,
+                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                            anim keffiyeh helvetica, craft beer labore wes anderson cred
+                            nesciunt sapiente ea proident.
+                            </CardBody>
+                        </Card>
+                    </Collapse>
                 </div>
             </div>
 

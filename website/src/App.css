@@ -105,15 +105,35 @@ body {
 }
 .consultingContainer .consultingSectionContainer {
   margin: 0 auto;
-  width: 300px;
+  width: 40%;
+  height: 100%;
+  margin-top: 50px;
+}
+.consultingContainer .consultingSectionContainer h2 {
+  margin: 50px auto;
+  text-align: center;
 }
 .consultingContainer .consultingSectionContainer .titleContainer {
   display: flex;
-  margin-top: 50%;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+}
+.consultingContainer .consultingSectionContainer .titleContainer .collapseContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid darkgrey;
+  background-color: lightgrey;
+}
+.consultingContainer .consultingSectionContainer .titleContainer .collapseContainer .down {
+  transform: rotate(90deg);
+  position: relative;
+  right: 20px;
+}
+.consultingContainer .consultingSectionContainer .titleContainer .collapseContainer .up {
+  transform: rotate(-90deg);
 }
 .consultingContainer .consultingSectionContainer .titleContainer h4 {
   font-size: 30px;
@@ -510,7 +530,7 @@ body {
   margin: 100px auto 0px;
 }
 .modalCarouselContainer {
-  height: 700px;
+  height: 600px;
   width: 700px;
   margin: 0 auto;
   overflow: hidden;
@@ -522,13 +542,15 @@ body {
   position: absolute !important;
   background-color: black !important;
   left: 10%;
-  height: 75px !important;
+  border-radius: 25px;
+  height: 50px;
 }
 .modalCarouselContainer .carousel-control-prev-icon {
   position: absolute !important;
   background-color: black !important;
   right: 10%;
-  height: 75px !important;
+  border-radius: 25px;
+  height: 50px;
 }
 .modal-content {
   background: linear-gradient(whitesmoke, lightgrey) !important;
