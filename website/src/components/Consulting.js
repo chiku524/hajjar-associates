@@ -137,7 +137,7 @@ const Consulting = props => {
     return (
         <div className='consultingContainer'>
             <div className='consultingSectionContainer'>
-                <h2>SERVICES</h2>
+                <h2>CONSULTING</h2>
                 <div className='titleContainer'>
                     <div className='collapseContainer' onClick={toggleStructural}>
                         <h4>Architectural</h4>
