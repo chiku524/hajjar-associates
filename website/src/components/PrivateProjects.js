@@ -207,7 +207,7 @@ const privateProjects = [
     },
     {
         id: 26, 
-        name: 'Treasure On The Bar Condominium',
+        name: 'Treasure On The Bay Condominium',
         image: [treasureOnTheBayCondo, treasureOnTheBayCondo2, treasureOnTheBayCondo3]
     },
     {

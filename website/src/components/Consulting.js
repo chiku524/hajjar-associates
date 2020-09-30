@@ -155,8 +155,7 @@ const Consulting = props => {
                     </Collapse>
                     <div className='collapseContainer' onClick={toggleArchitectural}>
                         <h4>Structural</h4>
-                        <span className={architecturalArrow}>&#10151;</span>
-                            
+                        <span className={architecturalArrow}>&#10151;</span>    
                     </div>
                     <Collapse isOpen={isArchitecturalOpen}>
                         <Card>
@@ -170,8 +169,7 @@ const Consulting = props => {
                     </Collapse>
                     <div className='collapseContainer' onClick={toggleCivil}>
                         <h4>Civil</h4>
-                        <span className={civilArrow}>&#10151;</span>
-                            
+                        <span className={civilArrow}>&#10151;</span>          
                     </div>
                     <Collapse isOpen={isCivilOpen}>
                         <Card>
@@ -225,8 +223,7 @@ const Consulting = props => {
                     </div>
                     <div className='publicButton' onClick={takeToPublicProjects}>Browse Projects!</div>
                 </div>
-            </div>
-            
+            </div>  
         </div>
 
     )    

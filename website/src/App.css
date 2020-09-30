@@ -125,7 +125,12 @@ body {
   display: flex;
   justify-content: space-between;
   border: 1px solid darkgrey;
-  background-color: lightgrey;
+  background-color: maroon;
+  color: darkgoldenrod;
+}
+.consultingContainer .consultingSectionContainer .titleContainer .collapseContainer h4 {
+  text-indent: 10px;
+  font-size: 30px;
 }
 .consultingContainer .consultingSectionContainer .titleContainer .collapseContainer .down {
   transform: rotate(90deg);
@@ -135,9 +140,10 @@ body {
 .consultingContainer .consultingSectionContainer .titleContainer .collapseContainer .up {
   transform: rotate(-90deg);
 }
-.consultingContainer .consultingSectionContainer .titleContainer h4 {
-  font-size: 30px;
-  color: black;
+.consultingContainer .consultingSectionContainer .titleContainer .collapseContainer:hover {
+  cursor: pointer;
+  background-color: #af0707;
+  color: goldenrod;
 }
 .consultingContainer .contentContainer {
   width: 100%;
