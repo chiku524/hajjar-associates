@@ -2,19 +2,22 @@ import React, {useState, useRef} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import VodaIIResidences from '../images/VodaIIResidences.jpg';
 import VodaIResidences from '../images/VodaI.jpg';
+import dolceVitta from '../images/DolceVittaTownhouses.jpg';
 import cutlerBayMiddle from '../images/cutlerBayMiddle.jpg';
-import arrow from '../images/arrow.png';
+import hibiscus from '../images/38HibiscusIsland.jpg';
+import berkeleyHotel from '../images/BerkeleyHotel3.jpg';
 import bayHarbor from '../images/BayHarborResidences.jpg';
 import mequityStorage from '../images/MequityStorage.jpg';
 import cubeSmartStorage from '../images/CubeSmartStorage.jpg';
+import vineland from '../images/VinelandCenter.jpg';
+import miamiBeach5th from '../images/MiamiBeachFifth&Alton.jpg';
 
 const privateProjects = [
     {
-        src: VodaIIResidences,
+        src: hibiscus,
         altText: 'Slide 1',
-        caption: 'Voda II Residences'
+        caption: '38 Hibiscus Island'
     },
     {
         src: VodaIResidences,
@@ -22,27 +25,27 @@ const privateProjects = [
         caption: 'Voda I Residences'
     },
     {
-        src: bayHarbor,
+        src: berkeleyHotel,
         altText: 'Slide 3',
-        caption: 'Bay Harbor Residences'
+        caption: 'Berkeley Hotel'
     }
 ]
 
 const publicProjects = [
     {
-        src: cutlerBayMiddle,
-        altText: 'Slide 1',
-        caption: 'Cutler Bay Middle School'
-    },
-    {
-        src: mequityStorage,
-        altText: 'Slide 2',
-        caption: 'Mequity Storage'
-    },
-    {
         src: cubeSmartStorage,
-        altText: 'Slide 3',
+        altText: 'Slide 1',
         caption: 'Cube Smart Storage'
+    },
+    {
+        src: miamiBeach5th,
+        altText: 'Slide 2',
+        caption: 'Miami Beach Fifth & Alton'
+    },
+    {
+        src: vineland,
+        altText: 'Slide 3',
+        caption: 'Vineland K-8 Center'
     }
 ]
 
@@ -186,7 +189,6 @@ const Consulting = props => {
 
             <div className='contentContainer'>
                 <div className='flex'>
-                    <h2>Private Projects</h2>
                     <div className='carouselContainer'>
                         <Carousel activeIndex={activeIndexPrivate} next={nextPrivate} previous={previousPrivate}>
                             <CarouselIndicators items={privateProjects} activeIndex={activeIndexPrivate} onClickHandler={goToIndexPrivate} />
@@ -198,6 +200,7 @@ const Consulting = props => {
                 </div>
                 <div className='contentFlex'>
                     <div className='content'>
+                        <h2>Private Projects</h2>
                         <p>Here goes some text about private projects</p>
                     </div>
                     <div className='privateButton' onClick={takeToPrivateProjects}>Browse Projects!</div>
@@ -207,7 +210,6 @@ const Consulting = props => {
 
             <div className='content2Container'>
                 <div className='flex'>
-                    <h2 id='title'>Public Projects</h2>
                     <div className='carousel2Container'>
                         <Carousel activeIndex={activeIndexPublic} next={nextPublic} previous={previousPublic}>
                             <CarouselIndicators items={publicProjects} activeIndex={activeIndexPublic} onClickHandler={goToIndexPublic} />
@@ -219,6 +221,7 @@ const Consulting = props => {
                 </div>
                 <div className='contentFlex'>
                     <div className='content'>
+                        <h2>Public Projects</h2>
                         <p>Here goes some text about public projects</p>
                     </div>
                     <div className='publicButton' onClick={takeToPublicProjects}>Browse Projects!</div>

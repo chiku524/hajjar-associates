@@ -31,9 +31,9 @@ body {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                border: 1px solid darkgrey;
-                background-color: maroon;
-                color: darkgoldenrod;
+                border: 1px solid whitesmoke;
+                background-color: #333;
+                color: silver;
 
                 h4 {
                     text-indent: 10px;
@@ -52,8 +52,8 @@ body {
             }
             .collapseContainer:hover {
                 cursor: pointer;
-                background-color: rgb(175, 7, 7);
-                color: goldenrod;
+                background-color: blue;
+                color: white;
             }
         }
     }
@@ -69,7 +69,7 @@ body {
         transition: all 1.3s ease;
         overflow: hidden;
         padding-bottom: 100px;
-        background-color: darkslategrey;
+        background-color: #333;
         display: flex;
         align-items: center;
 
@@ -83,38 +83,36 @@ body {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 45%;
+            width: 70%;
             height: 100%;
-            margin-left: 3%;
 
             @media @1150px {
                 margin-left: 0px;
             }
-            
-            h2 {
-                color: silver;
-                position: relative;
-                left: -400px;
-                transition: all 1.3s ease;
-                width: 100%;
-                overflow: hidden;
-                margin-top: 75px;
-                font-size: 40px;            
-                
-                @media @1150px {
-                    left: -650px;
-                }
-            }
 
             .carouselContainer {
-                width: 650px;
-                height: 400px;
+                width: 100%;
+                height: 700px;
                 text-align: center;
                 float: right;
-            
-                img {
-                    width: 500px;
-                    height: 400px;
+                display: block;
+                text-align: center;
+
+                .carousel {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-item {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-item img {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-control-prev {
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }
@@ -123,7 +121,7 @@ body {
         .contentFlex {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             width: 45%;
             height: 80%;
@@ -139,6 +137,23 @@ body {
             .content {
                 font-size: 23px;
                 color: silver;
+
+                h2 {
+                    color: silver;
+                    position: relative;
+                    right: -800px;
+                    transition: all 1.3s ease;
+                    width: 100%;
+                    font-size: 40px;            
+                
+                    @media @1150px {
+                        left: -650px;
+                    }
+                }
+
+                p {
+                    margin-top: 100px;
+                }
             }
     
             .privateButton {
@@ -164,7 +179,7 @@ body {
         }
     }
     .contentContainer:hover h2 {
-        transform: translateX(77%);
+        transform: translateX(-150%);
         transition: all 1.3s ease;
         overflow: hidden;
 
@@ -181,9 +196,7 @@ body {
         margin: 0;
         padding: 0;
         border: none;
-        transition: all 1.3s ease;
         overflow: hidden;
-        padding-bottom: 100px;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -198,47 +211,43 @@ body {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 45%;
+            width: 70%;
             height: 100%;
-            margin-left: 3%;
 
             @media @1150px {
                 margin-right: 0px;
             }
 
-            h2 {
-                margin-top: 75px;
-                text-align: right;
-                transition: all 1.3s ease;
-                overflow: hidden;
-                width: 100%;
-                position: relative;
-                left: 400px;
-                font-size: 40px;
-
-                @media @1150px {
-                    left: 650px;
-                }
-            }
-
-            
-
             .carousel2Container {
-                width: 650px;
-                height: 400px;
+                width: 100%;
+                height: 700px;
                 text-align: center;
-            
-                img {
-                    width: 500px;
-                    height: 400px;
+                float: right;
+                display: block;
+                text-align: center;
+
+                .carousel {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-item {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-item img {
+                    height: 700px;
+                    width: 100%;
+                }
+                .carousel-control-prev {
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }
-
         .contentFlex {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             width: 45%;
             height: 80%;
@@ -254,8 +263,19 @@ body {
 
             .content {
                 font-size: 23px;
+
+                h2 {
+                    transition: all 1.3s ease;
+                    position: relative;
+                    left: -800px;
+                    font-size: 40px;
+                }
+
+                p {
+                    margin-top: 100px;
+                }
             }
-    
+        
             .publicButton {
                 border-radius: 5px;
                 display: flex;
@@ -268,6 +288,9 @@ body {
                 text-decoration: none;
                 background-color: white;
                 transition: all .5s ease;
+                margin-top: -200px;
+                position: relative;
+                top: -75px;
             }
             .publicButton:hover {
                 background-color: blue;
@@ -278,7 +301,7 @@ body {
         }
     }
     .content2Container:hover h2 {
-        transform: translateX(-77%);
+        transform: translateX(190%);
         transition: all 1.3s ease;
         overflow: hidden;
 
@@ -286,5 +309,5 @@ body {
             transform: translateX(-150%);
         }
     }
-}
 
+}

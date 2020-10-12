@@ -124,9 +124,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid darkgrey;
-  background-color: maroon;
-  color: darkgoldenrod;
+  border: 1px solid whitesmoke;
+  background-color: #333;
+  color: silver;
 }
 .consultingContainer .consultingSectionContainer .titleContainer .collapseContainer h4 {
   text-indent: 10px;
@@ -142,8 +142,8 @@ body {
 }
 .consultingContainer .consultingSectionContainer .titleContainer .collapseContainer:hover {
   cursor: pointer;
-  background-color: #af0707;
-  color: goldenrod;
+  background-color: blue;
+  color: white;
 }
 .consultingContainer .contentContainer {
   width: 100%;
@@ -155,7 +155,7 @@ body {
   transition: all 1.3s ease;
   overflow: hidden;
   padding-bottom: 100px;
-  background-color: darkslategrey;
+  background-color: #333;
   display: flex;
   align-items: center;
 }
@@ -170,44 +170,41 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 45%;
+  width: 70%;
   height: 100%;
-  margin-left: 3%;
 }
 @media (max-width: 1150px) {
   .consultingContainer .contentContainer .flex {
     margin-left: 0px;
   }
 }
-.consultingContainer .contentContainer .flex h2 {
-  color: silver;
-  position: relative;
-  left: -400px;
-  transition: all 1.3s ease;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 75px;
-  font-size: 40px;
-}
-@media (max-width: 1150px) {
-  .consultingContainer .contentContainer .flex h2 {
-    left: -650px;
-  }
-}
 .consultingContainer .contentContainer .flex .carouselContainer {
-  width: 650px;
-  height: 400px;
-  text-align: center;
+  width: 100%;
+  height: 700px;
   float: right;
+  display: block;
+  text-align: center;
 }
-.consultingContainer .contentContainer .flex .carouselContainer img {
-  width: 500px;
-  height: 400px;
+.consultingContainer .contentContainer .flex .carouselContainer .carousel {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .contentContainer .flex .carouselContainer .carousel-item {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .contentContainer .flex .carouselContainer .carousel-item img {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .contentContainer .flex .carouselContainer .carousel-control-prev {
+  margin: 0;
+  padding: 0;
 }
 .consultingContainer .contentContainer .contentFlex {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 45%;
   height: 80%;
@@ -224,6 +221,22 @@ body {
 .consultingContainer .contentContainer .contentFlex .content {
   font-size: 23px;
   color: silver;
+}
+.consultingContainer .contentContainer .contentFlex .content h2 {
+  color: silver;
+  position: relative;
+  right: -800px;
+  transition: all 1.3s ease;
+  width: 100%;
+  font-size: 40px;
+}
+@media (max-width: 1150px) {
+  .consultingContainer .contentContainer .contentFlex .content h2 {
+    left: -650px;
+  }
+}
+.consultingContainer .contentContainer .contentFlex .content p {
+  margin-top: 100px;
 }
 .consultingContainer .contentContainer .contentFlex .privateButton {
   float: right;
@@ -246,7 +259,7 @@ body {
   cursor: pointer;
 }
 .consultingContainer .contentContainer:hover h2 {
-  transform: translateX(77%);
+  transform: translateX(-150%);
   transition: all 1.3s ease;
   overflow: hidden;
 }
@@ -261,9 +274,7 @@ body {
   margin: 0;
   padding: 0;
   border: none;
-  transition: all 1.3s ease;
   overflow: hidden;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -279,43 +290,41 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 45%;
+  width: 70%;
   height: 100%;
-  margin-left: 3%;
 }
 @media (max-width: 1150px) {
   .consultingContainer .content2Container .flex {
     margin-right: 0px;
   }
 }
-.consultingContainer .content2Container .flex h2 {
-  margin-top: 75px;
-  text-align: right;
-  transition: all 1.3s ease;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  left: 400px;
-  font-size: 40px;
-}
-@media (max-width: 1150px) {
-  .consultingContainer .content2Container .flex h2 {
-    left: 650px;
-  }
-}
 .consultingContainer .content2Container .flex .carousel2Container {
-  width: 650px;
-  height: 400px;
+  width: 100%;
+  height: 700px;
+  float: right;
+  display: block;
   text-align: center;
 }
-.consultingContainer .content2Container .flex .carousel2Container img {
-  width: 500px;
-  height: 400px;
+.consultingContainer .content2Container .flex .carousel2Container .carousel {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .content2Container .flex .carousel2Container .carousel-item {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .content2Container .flex .carousel2Container .carousel-item img {
+  height: 700px;
+  width: 100%;
+}
+.consultingContainer .content2Container .flex .carousel2Container .carousel-control-prev {
+  margin: 0;
+  padding: 0;
 }
 .consultingContainer .content2Container .contentFlex {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 45%;
   height: 80%;
@@ -333,6 +342,15 @@ body {
 .consultingContainer .content2Container .contentFlex .content {
   font-size: 23px;
 }
+.consultingContainer .content2Container .contentFlex .content h2 {
+  transition: all 1.3s ease;
+  position: relative;
+  left: -800px;
+  font-size: 40px;
+}
+.consultingContainer .content2Container .contentFlex .content p {
+  margin-top: 100px;
+}
 .consultingContainer .content2Container .contentFlex .publicButton {
   border-radius: 5px;
   display: flex;
@@ -345,6 +363,9 @@ body {
   text-decoration: none;
   background-color: white;
   transition: all 0.5s ease;
+  margin-top: -200px;
+  position: relative;
+  top: -75px;
 }
 .consultingContainer .content2Container .contentFlex .publicButton:hover {
   background-color: blue;
@@ -353,7 +374,7 @@ body {
   cursor: pointer;
 }
 .consultingContainer .content2Container:hover h2 {
-  transform: translateX(-77%);
+  transform: translateX(190%);
   transition: all 1.3s ease;
   overflow: hidden;
 }

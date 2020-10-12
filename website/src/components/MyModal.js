@@ -9,30 +9,30 @@ const MyModal = (props) => {
     const [animating, setAnimating] = useState(false);
 
     const next = () => {
+        if(animating) return;
+        const nextIndex = activeIndex === props.img.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const previous = () => {
+        if(animating) return;
+        const nextIndex = activeIndex === 0 ? props.img.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const goToIndex = (newIndex) => {
       if(animating) return;
-      const nextIndex = activeIndex === props.img.length - 1 ? 0 : activeIndex + 1;
-      setActiveIndex(nextIndex);
-  }
+      setActiveIndex(newIndex);
+    }
 
-  const previous = () => {
-      if(animating) return;
-      const nextIndex = activeIndex === 0 ? props.img.length - 1 : activeIndex - 1;
-      setActiveIndex(nextIndex);
-  }
-
-  const goToIndex = (newIndex) => {
-    if(animating) return;
-    setActiveIndex(newIndex);
-}
-
-const slides = props.img.map((item) => {
-  return(
-      <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item}>
-          <img src={item} alt={item.src} className='carouselImg' />
-          <CarouselCaption captionHeader={item.caption} />
-      </CarouselItem>
-  )
-})
+    const slides = props.img.map((item) => {
+      return(
+          <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item}>
+              <img src={item} alt={item.src} className='carouselImg' />
+              <CarouselCaption captionHeader={item.caption} />
+          </CarouselItem>
+      )
+    })
 
     return (
       <Modal
