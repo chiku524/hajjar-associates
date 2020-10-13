@@ -8,6 +8,66 @@
 .navbar .nav-link:hover {
   text-shadow: 0px 0px 10px blue;
 }
+.footerContainer {
+  background-color: #333;
+  height: 350px;
+}
+.footerContainer .borders {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 40px;
+}
+.footerContainer .borders .firstBorder {
+  width: 5%;
+  border-bottom: 2px solid silver;
+  margin-left: 40px;
+}
+.footerContainer .borders .secondBorder {
+  width: 5%;
+  border-bottom: 2px solid silver;
+  margin-left: 25%;
+}
+.footerContainer .borders .thirdBorder {
+  width: 5%;
+  border-bottom: 2px solid silver;
+  margin-left: 25%;
+}
+.footerContainer .content {
+  margin-left: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.footerContainer .content .servicesTitle {
+  color: #056399;
+}
+.footerContainer .content .servicesTitle .services {
+  margin-top: 20px;
+}
+.footerContainer .content .servicesTitle .services p {
+  color: silver;
+}
+.footerContainer .content .projectTitle {
+  color: #056399;
+  margin-left: 25%;
+}
+.footerContainer .content .projectTitle .projects {
+  margin-top: 20px;
+}
+.footerContainer .content .projectTitle .projects p {
+  color: silver;
+}
+.footerContainer .content .contactTitle {
+  color: #056399;
+  margin-left: 24.2%;
+}
+.footerContainer .content .contactTitle .info {
+  margin-top: 20px;
+}
+.footerContainer .content .contactTitle .info p {
+  color: silver;
+}
 .homeContainer {
   background: linear-gradient(whitesmoke, lightgrey);
   min-width: 1350px;

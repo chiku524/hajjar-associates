@@ -97,11 +97,11 @@ const Consulting = props => {
     }
 
     const takeToPublicProjects = () => {
-        history.push('/consulting/public/projects');
+        history.push('/consulting/public-projects');
     }
 
     const takeToPrivateProjects = () => {
-        history.push('/consulting/private/projects');
+        history.push('/consulting/private-projects');
     }
 
     const toggleStructural = () => {

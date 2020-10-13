@@ -8,6 +8,7 @@ import PublicProjects from './components/PublicProjects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Construction from './components/Construction';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -27,10 +28,10 @@ function App() {
           <Route exact path='/consulting'>
             <Consulting />
           </Route>
-          <Route exact path='/consulting/private/projects'>
+          <Route exact path='/consulting/private-projects'>
             <PrivateProjects />
           </Route>
-          <Route exact path='/consulting/public/projects'>
+          <Route exact path='/consulting/public-projects'>
             <PublicProjects />
           </Route>
           <Route exact path='/about'>
@@ -44,7 +45,7 @@ function App() {
           </Route>
         </Switch>
       </ScrollToTop>
-      
+      <Footer />
     </div>
   );
 }
