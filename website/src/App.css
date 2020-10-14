@@ -575,7 +575,6 @@ body {
   align-items: center;
   text-align: center;
   width: 80%;
-  border: 1px solid black;
 }
 @media (max-width: 1350px) {
   .pageContainer .contactContainer .content {
