@@ -545,10 +545,12 @@ body {
   background: linear-gradient(whitesmoke, lightgrey);
 }
 .pageContainer .contactContainer {
-  width: 60%;
+  width: 80%;
   height: 70%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto 0;
   padding-top: 100px;
   text-align: center;
@@ -569,9 +571,16 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  width: 80%;
+  border: 1px solid black;
+}
+@media (max-width: 1350px) {
+  .pageContainer .contactContainer .content {
+    width: 115%;
+  }
 }
 .pageContainer .contactContainer .content .card {
   width: 350px;

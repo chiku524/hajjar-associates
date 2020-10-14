@@ -5,10 +5,12 @@
 
 
     .contactContainer {
-        width: 60%;
+        width: 80%;
         height: 70%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto 0;
         padding-top: 100px;
         text-align: center;
@@ -29,9 +31,15 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             text-align: center;
+            width: 80%;
+            border: 1px solid black;
+
+            @media @1350px {
+                width: 115%;
+            }
 
             .card {
                 width: 350px;
