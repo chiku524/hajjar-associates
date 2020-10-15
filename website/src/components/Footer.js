@@ -11,6 +11,7 @@ const Footer = () => {
             </div>
             <div className='content'>
                 <div className='servicesTitle'>
+                    <hr align='left'></hr>
                     <h4>Services</h4>
                     <div className='services'>
                         <Link to='/consulting'>
@@ -25,6 +26,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='projectTitle'>
+                    <hr align='left'></hr>
                     <h4>Projects</h4>
                     <div className='projects'>
                         <Link to='/consulting/private-projects'>
@@ -36,6 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='contactTitle'>
+                    <hr align='left'></hr>
                     <h4>Contact</h4>
                     <div className='info'>
                         <p>45 Valencia Avenue</p>

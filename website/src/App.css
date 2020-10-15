@@ -10,28 +10,14 @@
 }
 .footerContainer {
   background-color: #333;
-  height: 350px;
+  min-width: 1350px;
+  height: 400px;
 }
 .footerContainer .borders {
   display: flex;
   flex-direction: row;
   width: 100%;
   padding-top: 40px;
-}
-.footerContainer .borders .firstBorder {
-  width: 5%;
-  border-bottom: 2px solid silver;
-  margin-left: 40px;
-}
-.footerContainer .borders .secondBorder {
-  width: 5%;
-  border-bottom: 2px solid silver;
-  margin-left: 25%;
-}
-.footerContainer .borders .thirdBorder {
-  width: 5%;
-  border-bottom: 2px solid silver;
-  margin-left: 25%;
 }
 .footerContainer .content {
   margin-left: 40px;
@@ -42,6 +28,10 @@
 .footerContainer .content .servicesTitle {
   color: #056399;
 }
+.footerContainer .content .servicesTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
+}
 .footerContainer .content .servicesTitle .services {
   margin-top: 20px;
 }
@@ -50,7 +40,11 @@
 }
 .footerContainer .content .projectTitle {
   color: #056399;
-  margin-left: 25%;
+  margin-left: 30%;
+}
+.footerContainer .content .projectTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
 }
 .footerContainer .content .projectTitle .projects {
   margin-top: 20px;
@@ -60,7 +54,11 @@
 }
 .footerContainer .content .contactTitle {
   color: #056399;
-  margin-left: 24.2%;
+  margin-left: 30%;
+}
+.footerContainer .content .contactTitle hr {
+  border-top: 2px solid silver;
+  width: 90px;
 }
 .footerContainer .content .contactTitle .info {
   margin-top: 20px;
@@ -159,7 +157,7 @@ body {
 }
 .consultingContainer {
   min-height: 100%;
-  min-width: 100%;
+  min-width: 1350px;
   padding-top: 50px;
   background: linear-gradient(whitesmoke, lightgrey);
 }
