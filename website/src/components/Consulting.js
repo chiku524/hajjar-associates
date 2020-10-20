@@ -149,10 +149,7 @@ const Consulting = props => {
                     <Collapse isOpen={isStructuralOpen}>
                         <Card>
                             <CardBody>
-                            Anim pariatur cliche reprehenderit,
-                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                            anim keffiyeh helvetica, craft beer labore wes anderson cred
-                            nesciunt sapiente ea proident.
+                            Our services include but not limited to planning, design, construction and operation of buildings, such as analysis and integrated design of environmental systems (energy conservation, HVAC, plumbing, lighting, fire protection, acoustics, vertical and horizontal transportation), structural systems, behavior and properties of building components and materials, and construction management.
                             </CardBody>
                         </Card>
                     </Collapse>
@@ -201,7 +198,7 @@ const Consulting = props => {
                 <div className='contentFlex'>
                     <div className='content'>
                         <h2>Private Projects</h2>
-                        <p>Here goes some text about private projects</p>
+                        <p>M. Hajjar & Associates, Inc. (MHA) has completed many projects within the private sector through two different categories: Residential & Commercial. Residential -  new apartments/ condominiums, mixed use projects and private homes. Commercial -  storage facilities, shopping centers, retail stores, restaurants, automotive dealerships, and more!</p>
                     </div>
                     <div className='privateButton' onClick={takeToPrivateProjects}>Browse Projects!</div>
                 </div>
@@ -222,13 +219,12 @@ const Consulting = props => {
                 <div className='contentFlex'>
                     <div className='content'>
                         <h2>Public Projects</h2>
-                        <p>Here goes some text about public projects</p>
+                        <p>M. Hajjar & Associates, Inc. (MHA) has completed many projects within the public sector ranging from Architect/Engineer projects, Maintenance Projects, and specialty projects. Some of our clients include: Miami Dade County Public Schools, Miami International Airport, Fort Lauderdale International Airport, Port of Miami, Fire Department, and many more!</p>
                     </div>
                     <div className='publicButton' onClick={takeToPublicProjects}>Browse Projects!</div>
                 </div>
             </div>  
         </div>
-
     )    
 }
 

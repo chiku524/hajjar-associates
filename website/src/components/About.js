@@ -33,6 +33,86 @@ const About = () => {
             </div>
             <div className='teamContainer'>
                 <h2>Our team</h2>
+                <div className='team'>
+                    <div className='level1'>
+                        <h4>Level 1</h4>
+                        <div className='bigboss'>
+                            <h5>Principal / Owner</h5>
+                            <h5>Mohammad Hajjar</h5>
+                            <p>P.E. in Strucural Engineering</p>
+                            <p>Owner of MHA</p>
+                        </div>
+                    </div>
+                    <div className='level2'>
+                        <div className='pm'>
+                            <h5>Project Manager</h5>
+                            <h5>Alireza Shirvani</h5>
+                        </div>
+                        <div className='architect'>
+                            <h5>Architects</h5>
+                            <div className='people'>
+                                <div className='person'>
+                                    <h5>Luis Patrolie</h5>
+                                    <p>R.A.</p>
+                                </div>
+                                <div className='person'>
+                                    <h5>Andres Diaz</h5>
+                                    <p>R.A.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='civil'>
+                            <div className='person'>
+                                <h5>Jorge Canales</h5>
+                                <p>P.E. in Civil Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='level3'>
+                        <div className='drafting'>
+                            <div className='structural'>
+                                <h5>Structural Engineers</h5>
+                                <div className='people'>
+                                    <div className='person'>
+                                        <h5>Dunia Escobar</h5>
+                                    </div>
+                                    <div className='person'>
+                                        <h5>Yuly</h5>
+                                    </div>
+                                    <div className='person'>
+                                        <h5>Hossein</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='inspector'>
+                                <h5>Inspector</h5>
+                                <h5>Mike Shojaie</h5>
+                            </div>
+                            <div className='architectural'>
+                                <h5>Architectural Engineer</h5>
+                                <div className='person'>
+                                    <h5>Karina Trespalacios</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='level4'>
+                        <div className='admin'>
+                            <div className='accounting'>
+                                <h5>Accounting / Admin</h5>
+                                <div className='person'>
+                                    <h5>Saman Hajjar</h5>
+                                </div>
+                            </div>
+                            <div className='administration'>
+                                <h5>Admin</h5>
+                                <div className='person'>
+                                    <h5>Rosanib Bautista</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

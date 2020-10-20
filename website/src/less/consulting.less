@@ -88,6 +88,7 @@ body {
 
             @media @1150px {
                 margin-left: 0px;
+                width: 90%;
             }
 
             .carouselContainer {
@@ -97,6 +98,10 @@ body {
                 float: right;
                 display: block;
                 text-align: center;
+
+                @media @1150px {
+                    margin-top: 250px;
+                }
 
                 .carousel {
                     height: 700px;
@@ -121,7 +126,7 @@ body {
         .contentFlex {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
             width: 45%;
             height: 80%;
@@ -130,13 +135,15 @@ body {
             @media @1150px {
                 margin-right: 0px;
                 justify-content: none;
-                margin-top: -20%;
+                margin-top: -100px;
                 width: 70%;
             }
 
             .content {
                 font-size: 23px;
                 color: silver;
+                margin: 0 60px;
+                text-indent: 25px;
 
                 h2 {
                     color: silver;
@@ -147,7 +154,9 @@ body {
                     font-size: 40px;            
                 
                     @media @1150px {
-                        left: -650px;
+                        left: -880px;
+                        top: -760px;
+                        font-size: 60px;
                     }
                 }
 
@@ -169,6 +178,7 @@ body {
                 text-decoration: none;
                 background-color: white;
                 transition: all .5s ease;
+                margin-top: 100px;
             }
             .privateButton:hover {
                 background-color: blue;
@@ -179,12 +189,18 @@ body {
         }
     }
     .contentContainer:hover h2 {
-        transform: translateX(-150%);
+        transform: translateX(-120%);
         transition: all 1.3s ease;
         overflow: hidden;
 
+        @media @1600px {
+            transform: translateX(-150%);
+        }
+        @media @1500px {
+            transform: translateX(-180%);
+        }
         @media @1150px {
-            transform: translateX(150%);
+            transform: translateX(130%);
         }
     }
     
@@ -216,6 +232,7 @@ body {
 
             @media @1150px {
                 margin-right: 0px;
+                width: 90%;
             }
 
             .carousel2Container {
@@ -225,6 +242,10 @@ body {
                 float: right;
                 display: block;
                 text-align: center;
+
+                @media @1150px {
+                    margin-top: 250px;
+                }
 
                 .carousel {
                     height: 700px;
@@ -247,7 +268,7 @@ body {
         .contentFlex {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             width: 45%;
             height: 80%;
@@ -263,12 +284,23 @@ body {
 
             .content {
                 font-size: 23px;
+                margin: -20px 60px;
+                text-indent: 25px;
+                
+                @media @1150px {
+                    margin-top: 100px;
+                }
 
                 h2 {
                     transition: all 1.3s ease;
                     position: relative;
-                    left: -800px;
+                    left: -880px;
                     font-size: 40px;
+                    
+                    @media @1150px {
+                        top: -730px;
+                        font-size: 60px;
+                    }
                 }
 
                 p {
@@ -288,7 +320,7 @@ body {
                 text-decoration: none;
                 background-color: white;
                 transition: all .5s ease;
-                margin-top: -200px;
+                margin-top: 150px;
                 position: relative;
                 top: -75px;
             }
@@ -301,12 +333,18 @@ body {
         }
     }
     .content2Container:hover h2 {
-        transform: translateX(190%);
+        transform: translateX(170%);
         transition: all 1.3s ease;
         overflow: hidden;
 
+        @media @1600px {
+            transform: translate(200%);
+        }
+        @media @1400px {
+            transform: translate(230%);
+        }
         @media @1150px {
-            transform: translateX(-150%);
+            transform: translateX(130%);
         }
     }
 
