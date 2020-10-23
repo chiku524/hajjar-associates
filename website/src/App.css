@@ -581,7 +581,7 @@ body {
   width: 100%;
   height: 60%;
   padding-top: 25px;
-  background: repeating-radial-gradient(#04045c, #333);
+  background: linear-gradient(whitesmoke, lightgrey);
   color: black;
 }
 .aboutContainer .teamContainer h2 {
