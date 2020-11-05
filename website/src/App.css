@@ -120,6 +120,11 @@
     width: 50%;
   }
 }
+@media (max-width: 770px) {
+  .homeContainer .services .big3 .card {
+    height: 800px;
+  }
+}
 .homeContainer .services .big3 .card .link {
   color: black;
   text-decoration: none;
