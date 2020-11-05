@@ -13,11 +13,6 @@
   min-width: 1350px;
   height: 400px;
 }
-@media (max-width: 770px) {
-  .footerContainer {
-    min-width: 100%;
-  }
-}
 .footerContainer .borders {
   display: flex;
   flex-direction: row;
@@ -75,11 +70,6 @@
   background: linear-gradient(whitesmoke, lightgrey);
   min-width: 1350px;
   height: 100%;
-}
-@media (max-width: 770px) {
-  .homeContainer {
-    min-width: 100%;
-  }
 }
 .homeContainer .imgContainer {
   padding: 250px 0px;
@@ -176,11 +166,6 @@ body {
   min-width: 1350px;
   padding-top: 50px;
   background: linear-gradient(whitesmoke, lightgrey);
-}
-@media (max-width: 770px) {
-  .consultingContainer {
-    min-width: 100%;
-  }
 }
 .consultingContainer .consultingSectionContainer {
   margin: 0 auto;
@@ -548,11 +533,6 @@ body {
   min-height: 100%;
   min-width: 1350px;
 }
-@media (max-width: 770px) {
-  .aboutContainer {
-    min-width: 100%;
-  }
-}
 .aboutContainer .contentContainer {
   width: 100%;
   background: linear-gradient(whitesmoke, lightgrey);
@@ -631,11 +611,6 @@ body {
   max-height: 100%;
   background: linear-gradient(whitesmoke, lightgrey);
 }
-@media (max-width: 770px) {
-  .pageContainer {
-    min-width: 100%;
-  }
-}
 .pageContainer .contactContainer {
   width: 80%;
   height: 1050px;
@@ -709,11 +684,6 @@ body {
   width: 1350px;
   height: 100%;
   background: linear-gradient(whitesmoke, lightgrey);
-}
-@media (max-width: 770px) {
-  .constructionContainer {
-    min-width: 100%;
-  }
 }
 .constructionContainer .carouselContainer {
   width: 700px;
