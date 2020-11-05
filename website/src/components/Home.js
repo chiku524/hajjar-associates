@@ -26,14 +26,14 @@ const Home = (props) => {
                         <Link to='/construction' className='link'>
                             <img src={construction} alt='wix-photo' />
                             <h5>Construction</h5>
-                            <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                            <p>M. Hajjar & Associates, Inc. construction services range from new built projects, maintenance projects or just simple renovations and rehabilitation. Our team has many years of experience within the field with a broad range of projects.</p>
                         </Link>
                     </div>
                     <div className='card'>
                         <Link to='development' className='link'>
                             <img src={development} alt='wix-photo' />
                             <h5>Development</h5>
-                            <p>Pellentesque eget tincidunt mus viverra facilisi phasellus, eget eleifend. Venenatis ullamcorper, enim euismod aptent, rhoncus nonummy aliquam praesent phasellus laoreet. Fermentum montes est nullam inceptos, vitae praesent in augue nibh dolor placerat nec posuere nostra sem tincidunt tristique a dignissim leo fames class hymenaeos fermentum vestibulum justo. Tellus nisi metus.</p>
+                            <p>M. Hajjar & Associates, Inc. works with the city for affordable housing, new retail areas, private homes and condominiums as well as mixed-use projects. These are the projects that all construction, engineering, and other services are done in house.</p>
                         </Link>
                     </div>
                 </div>

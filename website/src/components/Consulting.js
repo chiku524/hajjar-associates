@@ -160,10 +160,7 @@ const Consulting = props => {
                     <Collapse isOpen={isArchitecturalOpen}>
                         <Card>
                             <CardBody>
-                            Anim pariatur cliche reprehenderit,
-                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                            anim keffiyeh helvetica, craft beer labore wes anderson cred
-                            nesciunt sapiente ea proident.
+                            We consult with our clients to focus on the framework of structures of buildings, and on designing those structures to withstand the stresses and pressures of their environment and remain safe, stable and secure throughout their use. Our company focuses on the structural engineering of buildings and any structures within an educational setting.
                             </CardBody>
                         </Card>
                     </Collapse>
@@ -174,10 +171,7 @@ const Consulting = props => {
                     <Collapse isOpen={isCivilOpen}>
                         <Card>
                             <CardBody>
-                            Anim pariatur cliche reprehenderit,
-                            enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                            anim keffiyeh helvetica, craft beer labore wes anderson cred
-                            nesciunt sapiente ea proident.
+                            Our consulting deals with walk-way bridges that connect buildings as well as parking lots, bleachers, and docking systems for ships. 
                             </CardBody>
                         </Card>
                     </Collapse>

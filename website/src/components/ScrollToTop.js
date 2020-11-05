@@ -5,6 +5,7 @@ function ScrollToTop({ history, children }) {
   useEffect(() => {
     const unlisten = history.listen(() => {
       window.scrollTo(0, 0);
+      document.body.style.tranform = 'scale(.8)';
     });
     return () => {
       unlisten();
