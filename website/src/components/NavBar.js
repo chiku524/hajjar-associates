@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return(
         <>
-            <Navbar light fixed='top' expand="md" className='navbar'>
+            <Navbar light fixed='top' expand="xs" className='navbar'>
                 <Link to='/home'>
                     <NavbarBrand to="/home" className='navbarLogo'>
                         <img src={blueLogoNoText} alt='hajjarLogo' />
